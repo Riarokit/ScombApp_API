@@ -1,19 +1,24 @@
 class User {
-  // コンストラクタ
+  final String token; // 認証トークン
+  final String userType; // ユーザータイプ（例: student, teacher）
+  final String gakubu; // 学部コード
+  final String gakka; // 学科コード
+
+  // 通常のコンストラクタ
   User({
-    required this.id,
-    required this.password,
+    required this.token,
+    required this.userType,
+    required this.gakubu,
+    required this.gakka,
   });
 
-  // プロパティ
-  final String id;
-  final String password;
-
-  // JSONからUserを生成するファクトリコンストラクタ
+  // ファクトリコンストラクタ：APIのレスポンス(JSON)からUserインスタンスを作る
   factory User.fromJson(dynamic json) {
     return User(
-      id: json['id'] as String,
-      password: json['profile_image_url'] as String,
+      token: json['token'],
+      userType: json['user_type'],
+      gakubu: json['gakubu'],
+      gakka: json['gakka'],
     );
   }
 }

@@ -16,13 +16,13 @@ class MainApp extends StatelessWidget {
         primarySwatch: Colors.green,
         fontFamily: 'Hiragino Sans',
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF55C500),
+          backgroundColor: Colors.green,
         ),
         textTheme: Theme.of(context).textTheme.apply(
           bodyColor: Colors.white,
         ),
       ),
-      home: const LoginScreen(),
+      home: LoginScreen(),
     );
   }
 }
