@@ -22,7 +22,7 @@ APIを用いてログイン時にユーザごとにトークンを取得し、�
 ---
 
 ## 📁 ディレクトリ構成
-
+"""
 lib/
 ├── model/ # 授業情報・ユーザ情報等のモデル定義
 │ ├── lecture.dart
@@ -32,3 +32,4 @@ lib/
 │ ├── login_screen.dart
 │ └── lectureinfo_screen.dart
 └── main.dart # アプリエントリポイント
+"""
